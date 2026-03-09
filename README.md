@@ -138,6 +138,20 @@ Below are well-known examples;
 
 ---
 
+### C) Amazon Prime Video — The "1/20th the Cost" Consolidation
+**Background:** In 2023, the Prime Video Video Quality Analysis (VQA) team published a widely discussed engineering case study detailing their transition from a distributed, serverless microservices architecture (utilizing AWS Step Functions and AWS Lambda) to a monolithic architecture.
+
+**Why consolidation happened (cost and performance drivers):**
+
+- Cost: The orchestration overhead and state transitions required to pass large video frames between multiple serverless functions were prohibitively expensive.
+- Performance: Moving massive amounts of video data over the network between services created severe latency bottlenecks.
+- Result: By consolidating the video analysis workflow into a single process (a monolith), the team reduced their infrastructure costs by 90% and bypassed the scaling limits previously imposed by the orchestration layer.
+
+**Links**
+- Company: https://www.primevideo.com/offers/nonprimehomepage/ref=dv_web_force_root
+
+---
+
 ## key details 
 
 ### When microservices are a strong fit
